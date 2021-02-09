@@ -3,3 +3,9 @@ Logan Kinch Added His Name
 Charlie Moreland was here
 Chris Costa
 Logan is bad at coding
+<<<<<<< HEAD
+=======
+Mac Is better than windows
+GitHub is Cool!
+>>>>>>> 0faef5a5c6b12c20beedd98ce7c0a2a95539e09d
+git bash is stupid
