@@ -1,1 +1,3 @@
 # Checkers
+
+8
