@@ -1,0 +1,25 @@
+{
+  "name": "Checkers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SELC2021/Checkers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SELC2021/Checkers/issues"
+  },
+  "homepage": "https://github.com/SELC2021/Checkers#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "description": ""
+}
