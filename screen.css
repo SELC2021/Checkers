@@ -5,10 +5,11 @@ body {
 #checker-board {
   width: 400px;
   height: 400px;
-  background-color:  redgrey;
+  background-color: grey;
   border: 10px solid rgba(0,0,0,0.65);
-  border-radius: 10px;
-  position: relative;
+  margin: 100px;
+  float: right;
+  /*position: middle;*/
 }
 
 .square {
@@ -16,8 +17,14 @@ body {
   height: 50px;
   float: left;
 }
-.black { background-color: black; }
-.red { background-color: red; }
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
 
 .checker {
   width: 45px;
@@ -25,5 +32,10 @@ body {
   border-radius: 30px;
   position: absolute;
 }
-.red { background-color: red; }
-.black { background-color: black; }
+.red {
+  background-color: red;
+}
+
+.black {
+  background-color: black;
+}
