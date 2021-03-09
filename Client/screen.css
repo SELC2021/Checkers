@@ -9,7 +9,6 @@ body {
   border: 10px solid rgba(0,0,0,0.65);
   margin: 100px;
   float: right;
-  /*position: middle;*/
 }
 
 .square {
@@ -32,10 +31,32 @@ body {
   border-radius: 30px;
   position: absolute;
 }
+
 .red {
   background-color: red;
 }
 
 .black {
   background-color: black;
+}
+.name {
+  border: 3px solid white;
+  position: relative;
+  top: 3px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+}
+h1 {
+  text-align: center;
+}
+.name p {
+  text-align: center;
+}
+.users {
+  border: 3px;
+  width: 400px;
+  height: 60px;
+  background-color: white;
+  float: left;
 }
