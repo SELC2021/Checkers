@@ -8,4 +8,4 @@ Creates a checkerboard
 with 24 pieces
 
 ## DEMO
-[DEMO](Checkers.html)
+[DEMO](http://Costa722.github.io/Checkers/Client/UserScreen/Checkers.html))
