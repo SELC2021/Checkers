@@ -31,6 +31,10 @@ p{
   height: 81.25px;
   float: left;
 }
+hr {
+  height: 5px;
+  background-color: black;
+}
 
 .black {
   background-color: black;
@@ -97,4 +101,7 @@ margin-left: 100px;
   width: 100px;
   height: 30px;
   visibility: hidden;
+}
+#test{
+  margin-left: 100px;
 }
