@@ -6,6 +6,3 @@ You play by moving the colored pieces one at a time knocking the opponents piece
 ### Checkerboard
 Creates a checkerboard
 with 24 pieces
-
-## DEMO
-[DEMO](http://Costa722.github.io/SELC2021/Checkers/Client/UserScreen/Checkers.html))
