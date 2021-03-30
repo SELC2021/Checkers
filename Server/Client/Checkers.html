@@ -160,10 +160,14 @@
 
         <button type = "submit" id = "next"><a href = "leaderboard.html">Next</a></button>
 
-        <button type = "submit" id = "test">
+        <button type = "submit" id = "testData">
+			Send Test Data
 		<script>
 
-			const move = {
+			var button = document.getElementById("testData")
+
+			button.onclick = function(){
+				const move = {
 		    color: "b",
 		    currPos: [0,4],
 		    toPos: [5,3]
@@ -178,6 +182,7 @@
 
 			xhr.send(toSend);
 
+			}
 
 		</script>
 
