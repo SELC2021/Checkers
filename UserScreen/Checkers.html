@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+  <head>
+    <title>Online Checkers</title>
+  </head>
+
+<div class = "textunits">
+      <div class="gameDesign">
+        <h1>Checkers</h1>
+        <hr>
+        <p>Developed by Cobol Boyz</p>
+      </div>
+          <link rel="StyleSheet" type="text/css" href="screen.css">
+
+  <div class = "users">
+    <div class = "name1">
+      <label for = "name1">Player 1 please enter your name</label>
+      <input type = "text" name = "name1" id = "name1">
+      <button type = "Submit" value = "Submit" id = "name1">Enter</button>
+    </div>
+
+  <div class = "name2">
+      <label for = "name2"><br>Player 2 please enter your name</label>
+      <input type = "text" name = "name2" id = "name2">
+      <button type = "Submit" value = "Submit" id = "name2">Enter</button>
+    </div>
+  </div>
+</div>
+
+
+<div class = "count">
+<table>
+<thread>
+<tr>
+<th scope = "col"> </th>
+<th scope = "col">Pieces taken</th>
+</tr>
+</thread>
+<tbody>
+<tr>
+  <td id = "player">Player 1:</td>
+  <td id = "count">Count</td>
+</tr>
+<tr>
+  <td id = "player">Player 2:</td>
+  <td id = "count">Count 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+        </head>
+     <body>
+        	<div id="checker-board">
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+        		<div class="red square"></div>
+        		<div class="black square"></div>
+
+        		<div class="black checker" id="black-checker-1"></div>
+        		<div class="black checker" id="black-checker-2"></div>
+        		<div class="black checker" id="black-checker-3"></div>
+        		<div class="black checker" id="black-checker-4"></div>
+        		<div class="black checker" id="black-checker-5"></div>
+        		<div class="black checker" id="black-checker-6"></div>
+        		<div class="black checker" id="black-checker-7"></div>
+        		<div class="black checker" id="black-checker-8"></div>
+        		<div class="black checker" id="black-checker-9"></div>
+        		<div class="black checker" id="black-checker-10"></div>
+        		<div class="black checker" id="black-checker-11"></div>
+        		<div class="black checker" id="black-checker-12"></div>
+
+            <div class="red checker" id="red-checker-1"></div>
+        		<div class="red checker" id="red-checker-2"></div>
+        		<div class="red checker" id="red-checker-3"></div>
+        		<div class="red checker" id="red-checker-4"></div>
+        		<div class="red checker" id="red-checker-5"></div>
+        		<div class="red checker" id="red-checker-6"></div>
+        		<div class="red checker" id="red-checker-7"></div>
+        		<div class="red checker" id="red-checker-8"></div>
+        		<div class="red checker" id="red-checker-9"></div>
+        		<div class="red checker" id="red-checker-10"></div>
+        		<div class="red checker" id="red-checker-11"></div>
+        		<div class="red checker" id="red-checker-12"></div>
+
+        	</div>
+
+        	<script src = "">
+        	'use strict';
+
+        	var board = document.getElementById('checker-board');
+        	var redCheckers = [];
+        	var blackCheckers = [];
+
+        	for (var i = 1; i <= 12; i = i + 1) {
+        		var redChecker = document.getElementById('red-checker-' + i);
+        		var blackChecker = document.getElementById('black-checker-' + i);
+
+        		var col = (i - 1) % 4;
+        		var row = Math.floor((i - 1) / 4);
+
+        		redChecker.style.top = 50 + 50 * row - 45;
+        		redChecker.style.left = 100 + 100 * col - 95 + (row === 1 ? 50 : 0);
+
+        		blackChecker.style.top = 310 - (50 * row - 45);
+        		blackChecker.style.left = 100 + 100 * col - 95 + (row !== 1 ? 50 : 0);
+
+        		redCheckers.push(redChecker);
+        		blackCheckers.push(blackChecker);
+        	}
+</script>
+
+        <button type = "submit" id = "next"><a href = "leaderboardv2.html">Next</a></button>
+
+        <button type = "submit" id = "test"></button>
+</body>
+</html>
