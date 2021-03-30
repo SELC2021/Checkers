@@ -2,6 +2,8 @@ const Express = require('express');
 
 const app = new Express();
 
+app.use(Express.static('Client'));
+
 const path = require('path');
 // Use Joi  
 
@@ -23,7 +25,7 @@ app.use(Express.json());
  }
 
 app.get("/newGame",(req,res)=>{
-    
+    // set board values to zero;
     res.send("CyCheckers"+"\n"+Printbord());
 });
 
@@ -32,7 +34,9 @@ app.get("/newGame",(req,res)=>{
 //    "color": "b",
 //    "currPos": [0,4],
 //    "toPos": [5,3]
+//    "King": False,
 //}
+
 
 
 app.get("/game",(req,res)=>{
@@ -47,7 +51,7 @@ app.get("/leaderboard",(req,res)=>{
 //black or red ,curPos  , toPos
 app.post("/move",(req,res)=>{
 
-    
+
 
     const movingPiece = req.body;
 
