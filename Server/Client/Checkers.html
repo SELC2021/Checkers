@@ -160,6 +160,27 @@
 
         <button type = "submit" id = "next"><a href = "leaderboard.html">Next</a></button>
 
-        <button type = "submit" id = "test"></button>
+        <button type = "submit" id = "test">
+		<script>
+
+			const move = {
+		    color: "b",
+		    currPos: [0,4],
+		    toPos: [5,3]
+			};
+
+			const toSend = JSON.stringify(move);
+			const xhr = new XMLHttpRequest();
+
+			xhr.open("POST", "move");
+
+			xhr.setRequestHeader("Content-Type","application/json");
+
+			xhr.send(toSend);
+
+
+		</script>
+
+		</button>
 </body>
 </html>
