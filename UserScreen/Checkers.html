@@ -31,157 +31,101 @@
 </div>
 
 
-<div class = "count">
-<table>
-<thread>
-<tr>
-<th scope = "col"> </th>
-<th scope = "col">Pieces taken</th>
-</tr>
-</thread>
-<tbody>
-<tr>
-  <td id = "player">Player 1:</td>
-  <td id = "count">Count</td>
-</tr>
-<tr>
-  <td id = "player">Player 2:</td>
-  <td id = "count">Count 2</td>
-</tr>
-</tbody>
-</table>
-</div>
-
         </head>
      <body>
-        	<div id="checker-board">
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
 
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
+       <table id = "board">
+     <tr>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="0"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="1"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="2"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="3"></p></td>
+     </tr>
 
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
+     <tr>
+     <td><p class="redChecker" id="4"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="redChecker" id="5"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="redChecker" id="6"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="redChecker" id="7"></p></td>
+     <td class="noPiecehere"></td>
+     </tr>
 
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
+     <tr>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="8"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="9"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="10"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="redChecker" id="11"></p></td>
+     </tr>
 
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
+     <tr>
+     <td></td>
+     <td class="noPiecehere"></td>
+     <td></td>
+     <td class="noPiecehere"></td>
+     <td></td>
+     <td class="noPiecehere"></td>
+     <td></td>
+     <td class="noPiecehere"></td>
+     </tr>
 
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
+     <tr>
+       <td class="noPiecehere"></td>
+       <td></td>
+       <td class="noPiecehere"></td>
+       <td></td>
+       <td class="noPiecehere"></td>
+       <td></td>
+       <td class="noPiecehere"></td>
+       <td></td>
+     </tr>
 
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
+     <tr>
+     <td><p class="blackChecker" id="12"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="blackChecker" id="13"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="blackChecker" id="14"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="blackChecker" id="15"></p></td>
+     <td class="noPiecehere"></td>
+     </tr>
 
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
-        		<div class="red square"></div>
-        		<div class="black square"></div>
+     <tr>
+       <td class="noPiecehere"></td>
+       <td><p class="blackChecker" id="16"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="blackChecker" id="17"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="blackChecker" id="18"></p></td>
+       <td class="noPiecehere"></td>
+       <td><p class="blackChecker" id="19"></p></td>
+     </tr>
 
-        		<div class="black checker" id="black-checker-1"></div>
-        		<div class="black checker" id="black-checker-2"></div>
-        		<div class="black checker" id="black-checker-3"></div>
-        		<div class="black checker" id="black-checker-4"></div>
-        		<div class="black checker" id="black-checker-5"></div>
-        		<div class="black checker" id="black-checker-6"></div>
-        		<div class="black checker" id="black-checker-7"></div>
-        		<div class="black checker" id="black-checker-8"></div>
-        		<div class="black checker" id="black-checker-9"></div>
-        		<div class="black checker" id="black-checker-10"></div>
-        		<div class="black checker" id="black-checker-11"></div>
-        		<div class="black checker" id="black-checker-12"></div>
+     <tr>
+     <td><p class="blackChecker" id="20"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="blackChecker" id="21"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="blackChecker" id="22"></p></td>
+     <td class="noPiecehere"></td>
+     <td><p class="blackChecker" id="23"></p></td>
+     <td class="noPiecehere"></td>
+     </tr>
+     </table>
 
-            <div class="red checker" id="red-checker-1"></div>
-        		<div class="red checker" id="red-checker-2"></div>
-        		<div class="red checker" id="red-checker-3"></div>
-        		<div class="red checker" id="red-checker-4"></div>
-        		<div class="red checker" id="red-checker-5"></div>
-        		<div class="red checker" id="red-checker-6"></div>
-        		<div class="red checker" id="red-checker-7"></div>
-        		<div class="red checker" id="red-checker-8"></div>
-        		<div class="red checker" id="red-checker-9"></div>
-        		<div class="red checker" id="red-checker-10"></div>
-        		<div class="red checker" id="red-checker-11"></div>
-        		<div class="red checker" id="red-checker-12"></div>
-
-        	</div>
-
-        	<script src = "">
-        	'use strict';
-
-        	var board = document.getElementById('checker-board');
-        	var redCheckers = [];
-        	var blackCheckers = [];
-
-        	for (var i = 1; i <= 12; i = i + 1) {
-        		var redChecker = document.getElementById('red-checker-' + i);
-        		var blackChecker = document.getElementById('black-checker-' + i);
-
-        		var col = (i - 1) % 4;
-        		var row = Math.floor((i - 1) / 4);
-
-        		redChecker.style.top = 50 + 50 * row - 45;
-        		redChecker.style.left = 100 + 100 * col - 95 + (row === 1 ? 50 : 0);
-
-        		blackChecker.style.top = 310 - (50 * row - 45);
-        		blackChecker.style.left = 100 + 100 * col - 95 + (row !== 1 ? 50 : 0);
-
-        		redCheckers.push(redChecker);
-        		blackCheckers.push(blackChecker);
-        	}
-</script>
 
         <button type = "submit" id = "next"><a href = "leaderboardv2.html">Next</a></button>
 
-        <button type = "submit" id = "test"></button>
 </body>
 </html>
