@@ -36,21 +36,23 @@ hr {
 }
 
 .blackChecker{
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   padding: 12px;
   background-color: black;
   border: 1px solid white;
   border-radius: 50px;
+  margin-left: 10px;
 }
 
 .redChecker{
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   padding: 12px;
   background-color: red;
   border: 1px solid white;
   border-radius: 50px;
+  margin-left: 10px;
 }
 
 .noPiecehere{
