@@ -9,14 +9,6 @@ html, body {
  padding: 0;
 }
 
-#checker-board {
-  width: 650px;
-  height: 650px;
-  border: 10px solid rgb(47, 47, 47);
-  margin-top: -25px;
-  margin-right: 100px;
-  float: right;
-}
 h1{
   font-size: 55px;
   padding-bottom: 5px;
@@ -43,11 +35,37 @@ hr {
   background-color: red;
 }
 
-.checker {
-  width: 72.66px;
-  height: 72.666px;
-  border-radius: 30px;
-  position: absolute;
+.blackChecker{
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.redChecker{
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.noPiecehere{
+  background-color: red;
+}
+
+#board{
+  float: right;
+  margin-top: -150px;
+}
+td{
+background-color: black;
+width: 85px;
+height: 85px;
+text-align: center;
 }
 
 .red {
@@ -58,9 +76,10 @@ hr {
   background-color: black;
 }
 .textunits {
- margin-top: 100px;
+ margin-top: 200px;
  margin-left: 100px;
 }
+
 .gameDesign {
   border: 5px solid black;
   border-radius: 15px ;
@@ -100,33 +119,7 @@ hr {
   height: 30px;
   visibility: hidden;
 }
-#test{
-  margin-left: 100px;
-}
-th, td {
-  font-family: 'Lato', sans-serif;
-  font-weight: 800;
-  padding: 20px;
-  text-align: left;
-  width: 33.3333%;
-}
 
-table {
-  height: 40%;
-  left: 10%;
-  margin: 20px auto;
-  overflow-y: scroll;
-  float: left;
-  /* width: 30%; */
-  font-size: 18px;
-  margin-top: 400px;
-  margin-left: -515px;
-}
-tr {
-  background: #f4f7f8;
-  border-bottom: 1px solid #FFF;
-  margin-bottom: 5px;
-}
 #player{
   width: 10%;
 }
