@@ -40,7 +40,8 @@ app.get("/newGame",(req,res)=>{
 
 
 app.get("/game",(req,res)=>{
-    res.sendFile(path.join(__dirname,'Client','Checkers.html'));
+    //res.sendFile(path.join(__dirname,'Client','Checkers.html'));
+    res.sendFile(path.join(__dirname,'Client','GameScreen.html'));
 });
 
 app.get("/leaderboard",(req,res)=>{
