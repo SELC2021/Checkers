@@ -1,12 +1,8 @@
-
-function Cell(x,y,BlackOrRed,Emtpy,w,BackgroundColor){
+function Cell(x,y,BlackOrRed,Empty,w,BackgroundColor){
     this.x = x;
     this.y = y;
     this.PieceColor = BlackOrRed;
-    this.Emtpy = Emtpy;
-    if(Emtpy){
-       this.PieceColor = null; 
-    }
+    this.Empty = Empty;
     this.w = w;
     this.BackgroundColor = BackgroundColor;
     this.Background = false;
@@ -41,7 +37,7 @@ Cell.prototype.show = function() {
 
   if (this.PieceColor !== null) {
 
-  if(this.PieceColor){
+  if(this.PieceColor == true){
 
   fill('#747474');
   ellipse(this.x*this.w + this.w/2, this.y*this.w + this.w/2, this.w * 0.8);
@@ -63,7 +59,10 @@ Cell.prototype.contains = function(x, y) {
   return (x > this.x*this.w && x <= this.x*this.w + this.w && y >= this.y*this.w && y <= this.y*this.w + this.w);
 }
 
+try {
+  module.exports.Cell = Cell;
+} catch (error) {}
 
-Cell.prototype.isEmpty = function(){
-    return this.Emtpy;
-}
+try {
+  module.exports.EmptyCell = EmptyCell;
+} catch (error) {}

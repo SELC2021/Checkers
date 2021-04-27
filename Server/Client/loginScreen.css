@@ -1,0 +1,60 @@
+html, body {
+ background-color: steelblue;
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
+.textunits {
+ margin-top: 200px;
+ margin-left: 450px;
+}
+
+.gameDesign {
+  border: 5px solid black;
+  border-radius: 15px ;
+  float: left;
+  height: 150px;
+  width: 500px;
+  margin-left: 20px;
+  background-color: white;
+  font-family: cursive;
+  text-align: center;
+}
+.users {
+  border: 4px solid black;
+  border-radius: 15px;
+  width: 505px;
+  height: 85px;
+  background-color: white;
+  margin-left: -510px;
+  font-family: cursive;
+  margin-top: 250px;
+  float: left;
+}
+.name1 {
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: center;
+}
+.name2 {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+}
+
+#next {
+  margin-top: 550px;
+  width: 100px;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+}

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <head>
+      <title>Online Checkers</title>
+    </head>
+
+  <div class = "textunits">
+        <div class="gameDesign">
+          <h1>Checkers</h1>
+          <hr>
+          <p>Developed by Cobol Boyz</p>
+        </div>
+            <link rel="StyleSheet" type="text/css" href="loginScreen.css">
+
+    <div class = "users">
+      <div class = "name1">
+        <label for = "name1">Player 1 please enter your name</label>
+        <input type = "text" name = "name1" id = "name1">
+        <button onclick = "SetName()"> enter name </button>
+        <p id = "namebtn"></p>
+        <script>
+          function SetName(){
+            var newName = document.getElementById("name1").value;
+            sessionStorage.setItem('Username',newName );
+            console.log("name",newName);
+            window.location.href = "http://127.0.0.1:3000/game"
+          }
+        </script>
+      </div>
+</body>
+</html>

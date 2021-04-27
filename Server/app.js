@@ -2,32 +2,63 @@ const Express = require('express');
 
 const app = new Express();
 
+
+
+// Import and Create New Player Data Base
+// Temp 
+
+const modGame = require('./game');
+
+const myGame = new modGame();
+
 app.use(Express.static('Client'));
 
 const path = require('path');
+
+const modPlayerDataBase = require('./PlayerDataBase');
+
+
+const PlayerDataBase = new modPlayerDataBase();
+
+const modUser = require('./user');
 // Use Joi  
 
 app.use(Express.json());
 
-// 1 = black 
-// 2 = red
-// 0 = blank
-
- var board = {
-     row0: [0,0,0,0,0,0,0,0],
-     row1: [0,0,0,0,0,0,0,0],
-     row2: [0,0,0,0,0,0,0,0],
-     row3: [0,0,0,0,0,0,0,0],
-     row4: [0,0,0,0,0,0,0,0],
-     row5: [0,0,0,0,0,0,0,0],
-     row6: [0,0,0,0,0,0,0,0],
-     row7: [0,0,0,0,0,0,0,0]
- }
-
-app.get("/newGame",(req,res)=>{
-    // set board values to zero;
-    res.send("CyCheckers"+"\n"+Printbord());
+app.get("/home",(req,res)=>{
+    res.sendFile(path.join(__dirname,'Client','loginScreen.html'));
 });
+
+app.get("/newUser/:name",(req,res) =>{
+    
+    var name = req.params.name;
+
+    var id = PlayerDataBase.GenID();
+
+    var match = PlayerDataBase.FindGame(name,id)
+
+    var user = {
+        id: id,
+        color: match.getColor(id)
+    }
+
+    res.send(user);
+});
+
+app.get("/newGame/:Username/:id",(req,res)=>{
+
+    var userName = req.params.Username;
+    var id = req.params.id;
+
+    if(id === undefined){
+        res.send("error");
+    }
+
+    var board = PlayerDataBase.FindGame(userName,id).game.sendBoard();
+
+    res.send(board);
+});
+
 
 
 //{
@@ -37,7 +68,7 @@ app.get("/newGame",(req,res)=>{
 //    "King": False,
 //}
 
-
+ 
 
 app.get("/game",(req,res)=>{
     //res.sendFile(path.join(__dirname,'Client','Checkers.html'));
@@ -50,22 +81,26 @@ app.get("/leaderboard",(req,res)=>{
 
 
 //black or red ,curPos  , toPos
-app.post("/move",(req,res)=>{
-
-
-
+app.post("/move/:Username/:id",(req,res)=>{
+    var Username = req.params.Username;
+    var id = req.params.id;
     const movingPiece = req.body;
 
-    if (checkVal(movingPiece) == true){
-        color = 0
-        if (movingPiece.color == "b"){color = 1}
-        if(movingPiece.color == "r"){color = 2}
-        board['row'+movingPiece.toPos[1]][movingPiece.toPos[0]] = color;
-        board['row'+movingPiece.currPos[1]][movingPiece.currPos[0]] = 0;
+    try {
+        var match =  PlayerDataBase.FindGame(Username,id);
 
+         var color = match.getColor(id);
 
-    }
-    res.send(Printbord());
+         if(color == "black"){color = true}else if(color == "red"){color = false}
+
+         if(color == movingPiece.color){
+             match.game.setBoard(movingPiece);
+         }
+
+         res.send(match.game.sendBoard());
+        
+    } catch (error) {res.send("Error");}
+    
 });
 
 function Printbord(){
@@ -82,10 +117,9 @@ function Printbord(){
 }
 // TODO
 function checkVal(movingPiece){
-
-
   return true;
 }
 
 const port = process.env.PORT || 3000;
 app.listen(port,()=>console.log(`Listing to port ${port}`));
+ 
